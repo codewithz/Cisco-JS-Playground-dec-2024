@@ -30,7 +30,7 @@ const p = new Promise(
     reject
   ) => {
     console.log("Task to be performed-- Async Task");
-    const isTaskSuccessful = true;
+    const isTaskSuccessful = false;
     if (isTaskSuccessful) {
       resolve(10);
     } else {
@@ -47,9 +47,11 @@ p.then((result) => {
 }).catch((error) => {
   console.log(
     "Value Returned When the Promise is Broken:",
-    error
+    error.message
   );
 });
 
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
